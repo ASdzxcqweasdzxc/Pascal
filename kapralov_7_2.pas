@@ -5,7 +5,7 @@ var
   n, i, i1, i2: integer;
 
 begin
-write('Please enter number to skip multiplier from 1 to 6: '); readln(n);
+write('Please enter number to skip multiplier from 1 to 6 (0 will skip none): '); readln(n);
 if (n < 0) or (n > 6) then begin
   write('The number is out of scope!');
   readln;
