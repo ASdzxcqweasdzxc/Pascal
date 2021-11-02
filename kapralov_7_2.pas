@@ -17,13 +17,9 @@ for i1:= 1 to 6 do begin  //1st cicle
   s2:= 0;
   for i2:= 1 to 20 do begin //2nd cicle
     i:= i + 1;
-    if (i1 = n) then begin
-    s2:= 1;
-    continue
-    end;
     s2:= s2 + 1 / i
   end;                  // end of 2nd cicle
-  //if (i1 = n) then s2:= 1;
+  if (i1 = n) then continue;
   //write('s2= ', s2:5:5, ' ');
 s1:= s1 * s2;
 //writeln('s1= ', s1:5:5);
