@@ -4,8 +4,7 @@ type
   students = set of 1..30;
 
 var
-  eng, ger, fra, educated, non_educated: students;
-  all: set of 1..30;
+  all, eng, ger, fra, educated, non_educated: students;
   i, x: integer;
 
 begin
