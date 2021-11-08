@@ -46,19 +46,15 @@ for i:= n downto 1 do begin
 end;
 writeln;
 
-x:= 1;  //set x
-repeat  //make additional cicle for sorting
-for i:= 1 to n - 1 do begin //main sorting cicle
-    if (arr[i] > arr[i + 1]) then begin
-      k:= arr[i];
-      arr[i]:= arr[i + 1];
-      arr[i + 1]:= k;
-    end;
+for x:= 1 to n - 1 do begin //make additional cicle for sorting
+  for i:= 1 to n - 1 do begin //main sorting cicle
+      if (arr[i] > arr[i + 1]) then begin
+        k:= arr[i];
+        arr[i]:= arr[i + 1];
+        arr[i + 1]:= k;
+      end;
+  end;
 end;
-if (arr[x] > arr[x + 1]) then x:= 1
-else
- x:= x + 1;
-until (arr[x] < arr[x + 1]);
 
 writeln;
 writeln('b) Words written in alphabetical order:');
