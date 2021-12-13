@@ -42,7 +42,7 @@ begin
   bubble_sort(towns, comps, changes, n, demo);
   //procedure fillRes(var arr: arrOfRes; i: integer; var comps: integer; var changes: integer);
   fillRes(result, seq, comps, changes);
-  print(towns, n);
+  if (demo = 0) then print(towns, n);
   writeln('Results for ', name, ': comparisons ',result[1].comps, ', changes ', result[1].changes, '. Total of ', result[1].comps + result[1].changes, ' iterations.');
       
 ReadLn
