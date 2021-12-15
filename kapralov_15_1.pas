@@ -32,7 +32,7 @@ procedure sort(var list: pelement; item: pelement);
   pi: pelement;
 
   begin
-    new(pi);
+    pi:= nil;
     if (list^.next = nil) then sortIf2(list, item) else begin
       if (item^.ivalue < list^.ivalue) then
       begin
@@ -62,7 +62,7 @@ procedure print(list: pelement);
     new_item: pelement;
 
   begin
-    new(new_item);
+    new_item:= nil;
     new_item:= list;
     while (new_item^.next <> nil) do
     begin
@@ -113,7 +113,7 @@ new(L2);
   print(L2);
 
   {sorting lists}
-  new(x);
+  //x:= nil;
   x:=L2;
   while (x^.next <> nil) do
   begin
@@ -138,6 +138,10 @@ new(L2);
     x:= x^.next;
     Dispose(L1); L1:= x;
   end;
+  
+  Dispose(L1); L1:= nil;
+  Dispose(L2); L2:= nil;
+  Dispose(x); x:= nil;
 
 readln
 end.
