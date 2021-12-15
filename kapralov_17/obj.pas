@@ -21,12 +21,6 @@ type
   end;
   arrOfRes = array [0..4] of res;
 
-function newObj(): element;
-
 implementation
-function newObj(): element;
 
-
-begin
-  end;
 end.
