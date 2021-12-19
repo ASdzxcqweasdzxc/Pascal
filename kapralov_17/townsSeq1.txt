@@ -1,0 +1,187 @@
+Pokhara	        822	m
+Bloemfontein   	1395	m
+Shanghai       	122	m
+Butwal         	150	m
+Milan          	122	m
+Pretoria       	1339	m
+Tirana         	110	m
+Vienna         	170	m
+Minsk          	198	m
+Brussels       	13	m
+Sarajevo       	577	m
+Sofia          	591	m
+Edmonton       	645	m
+Zagreb         	130	m
+Prague         	244	m
+Copenhagen     	10	m
+Tallinn        	37	m
+Helsinki       	25	m
+Paris          	34	m
+Toluca         	266	m
+Berlin         	34	m
+Athens         	153	m
+Budapest       	102	m
+Dublin         	8	 m
+Rome           	14	m
+Tbilisi        	451	m
+Pristina       	652	m
+Riga           	8	m
+Vilnius        	124	m
+Chisinau       	80	m
+Podgorica      	61	m
+Amsterdam      	-2	m
+Oslo           	12	m
+Warsaw         	93	m
+Lisbon         	15	m
+Skopje         	243	m
+Bucharest      	70	m
+Moscow         	124	m
+Belgrade       	116	m
+Bratislava     	131	m
+Ljubljana      	281	m
+Madrid         	667	m
+Stockholm      	15	m
+Bern           	513	m
+Kyiv           	168	m
+London         	14	m
+Kabul          	1807	m
+Bamyan         	255	m
+Yerevan        	1032	m
+Baku           	-28	m
+Dhaka          	3	m
+Thimphu        	2307	m
+Pyinmana       	77	m
+Phnom Penh     	15	m
+Beijing        	63	m
+Kunming        	1892	m
+Bangalore      	920	m
+Chennai        	6	m
+Hyderabad      	542	m
+New Delhi      	210	m
+Srinagar       	1585	m
+Visakhapatnam  	45	m
+Jakarta        	3	m
+Tehran         	1235	m
+Shiraz         	1585	m
+Baghdad        	40	m
+Jerusalem      	754	m
+Tokyo          	17	m
+Amman          	1094	m
+Astana         	338	m
+Kuwait City    	5	m
+Bishkek        	771	m
+Vientiane      	148	m
+Beirut         	55	m
+Kuala Lumpur   	60	m
+Ulan Bator     	1284	m
+Kathmandu      	1298	m
+Pyongyang      	6	m
+Masqat         	68	m
+Skardu         	2228	m
+Islamabad      	587	m
+Baguio         	154	m
+Manila         	7	m
+Doha           	13	m
+Riyadh         	624	m
+Seoul          	33	m
+Colombo        	4	m
+Damascus       	691	m
+Taipei         	5	m
+Dushanbe       	789	m
+Bangkok        	1	m
+Lhasa          	349	m
+Dili           	11	m
+Ankara         	938	m
+Ashgabat       	215	m
+Abu Dhabi      	13	m
+Tashkent       	459	m
+Da Lat         	15	m
+Hanoi          	25	m
+Sana'a         	2253	m
+Buenos Aires   	10	m
+Mendoza        	746	m
+San Juan       	643	m
+La Paz         	3812	m
+São Paulo      	760	m
+Brasília       	1079	m
+Belo Horizonte 	852	m
+Curitiba       	935	m
+Calgary        	1045	m
+Ottawa         	70	m
+Santiago       	521	m
+Bogota         	2619	m
+San Jose       	1146	m
+Havana         	4	m
+Santo Domingo  	0	m
+Quito          	285	m
+San Salvador   	658	m
+Guatemala City 	1529	m
+Port-au-Prince 	98	m
+Tegucigalpa    	980	m
+Kingston       	53	m
+Mexico City    	2216	m
+Guadalajara    	1566	m
+Managua        	75	m
+Panama City    	0	m
+Asuncion       	54	m
+El Alto        	41	m
+Cusco          	3399	m
+Lima           	107	m
+Puno           	381	m
+La Rinconada   	5100	m
+Paramaribo     	1	m
+Albuquerque    	1619	m
+Dallas         	131	m
+Denver         	1609	m
+Washington D.C.	2	m
+Montevideo     	43	m
+Caracas        	909	m
+Alger /Algiers 	0	m
+Luanda         	6	m
+Porto-Novo     	38	m
+Gaborone       	1014	m
+Ouagadougou    	305	m
+Bujumbura      	794	m
+Yaoundé        	726	m
+Bangui         	369	m
+N'Djamena      	298	m
+Brazzaville    	155	m
+Kinshasa       	240	m
+Yamoussoukro   	217	m
+Djibouti       	0	m
+Cairo          	22	m
+Asmara         	2363	m
+Addis Ababa    	2362	m
+Libreville     	0	m
+Banjul         	0	m
+Accra          	98	m
+Conakry        	0	m
+Bissau         	0	m
+Nairobi        	1728	m
+Maseru         	1673	m
+Monrovia       	0	m
+Tripoli        	6	m
+Antananarivo   	1288	m
+Lilongwe       	1024	m
+Bamako         	349	m
+Nouakchott     	6	m
+Port Louis     	134	m
+Rabat          	53	m
+Maputo         	63	m
+Windhoek       	1655	m
+Niamey         	207	m
+Abuja          	777	m
+Kigali         	1567	m
+São Tomé       	141	m
+Dakar          	37	m
+Freetown       	76	m
+Johannesburg   	1753	m
+Dodoma         	1148	m
+Lome           	63	m
+Tunis          	0	m
+Kampala        	1202	m
+Lusaka         	127	m
+Harare         	148	m
+Canberra       	605	m
+Wellington     	20	m
+Port Moresby   	39	m
