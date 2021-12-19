@@ -6,109 +6,87 @@
 unit natMerge;
 
 interface
-uses obj;
+uses obj, sort;
 
+  procedure Natural_Merging_Sort(var x: arrOfTowns; var comps: integer; var changes: integer; max_n, mode: integer);
 implementation
-  procedure Natural_Merging_Sort(arr, ); 
+{compare procedure}
+function compare(a, b: element; var comps: integer): integer;
 begin
-void Natural_Merging_Sort (char *name){
-  int s1, s2, a1, a2, mark;
-  FILE *f, *f1, *f2;
-  s1 = s2 = 1;
-  while ( s1 > 0 && s2 > 0 ){
-    mark = 1;
-    s1 = 0;
-    s2 = 0;
-    f = fopen(name,"r");
-    f1 = fopen("nmsort_1","w");
-    f2 = fopen("nmsort_2","w");
-    fscanf(f,"%d",&a1);
-    if ( !feof(f) ) {
-      fprintf(f1,"%d ",a1);
-    }
-if ( !feof(f) ) fscanf(f,"%d",&a2);
-while ( !feof(f) ){
-      if ( a2 < a1 ) {
-        switch (mark) {
-          case 1:{fprintf(f1,"' "); mark = 2; s1++; break;}
-case 2:{fprintf(f2,"' "); mark = 1; s2++; break;}
-}
-}
-if ( mark == 1 ) { fprintf(f1,"%d ",a2); s1++; }
-else { fprintf(f2,"%d ",a2); s2++;}
-a1 = a2;
-fscanf(f,"%d",&a2);
-}
-if ( s2 > 0 && mark == 2 ) { fprintf(f2,"'");}
-if ( s1 > 0 && mark == 1 ) { fprintf(f1,"'");}
-fclose(f2);
-fclose(f1);
-fclose(f);
+  if (a.heigth > b.heigth) then compare:= 1;
+  inc(comps)
+end;
 
-cout << endl;
-Print_File(name);
-Print_File("nmsort_1");
-Print_File("nmsort_2");
-cout << endl;
+  procedure Natural_Merging_Sort(var x: arrOfTowns; var comps: integer; var changes: integer; max_n, mode: integer);
+var
+  s1, s2, x_left, x_right, y_left, y_right, tmp_val: integer;
+  y: arrOfTowns;
 
-f = fopen(name,"w");
-f1 = fopen("nmsort_1","r");
-f2 = fopen("nmsort_2","r");
-if ( !feof(f1) ) fscanf(f1,"%d",&a1);
-if ( !feof(f2) ) fscanf(f2,"%d",&a2);
-bool file1, file2;
-while ( !feof(f1) && !feof(f2) ){
-      file1 = file2 = false;
-      while ( !file1 && !file2 ) {
-        if ( a1 <= a2 ) {
-          fprintf(f,"%d ",a1);
-          file1 = End_Range(f1);
-          fscanf(f1,"%d",&a1);
-        }
-else {
-          fprintf(f,"%d ",a2);
-          file2 = End_Range(f2);
-          fscanf(f2,"%d",&a2);
-        }
-}
-while ( !file1 ) {
-        fprintf(f,"%d ",a1);
-        file1 = End_Range(f1);
-        fscanf(f1,"%d",&a1);
-      }
-while ( !file2 ) {
-        fprintf(f,"%d ",a2);
-        file2 = End_Range(f2);
-        fscanf(f2,"%d",&a2);
-      }
-}
-file1 = file2 = false;
-while ( !file1 && !feof(f1) ) {
-      fprintf(f,"%d ",a1);
-      file1 = End_Range(f1);
-      fscanf(f1,"%d",&a1);
-    }
-while ( !file2 && !feof(f2) ) {
-      fprintf(f,"%d ",a2);
-      file2 = End_Range(f2);
-      fscanf(f2,"%d",&a2);
-    }
-fclose(f2);
-fclose(f1);
-fclose(f);
-}
-remove("nmsort_1");
-remove("nmsort_2");
-}
-//определение конца блока
-bool End_Range (FILE * f){
-  int tmp;
-  tmp = fgetc(f);
-  tmp = fgetc(f);
-  if (tmp != '\'') fseek(f,-2,1);
-  else fseek(f,1,1);
-  return tmp == '\'' ? true : false;
-}
+begin
+  x_left:= 0;
+  x_right:= max_n;
+  y_left:= 0;
+  y_right:= max_n;
+  tmp_val:= 0;
+
+while (x_left < x_right) do
+  begin
+      for s1:= x_left to max_n do
+      begin
+        if (compare(x[s1 + 1], x[s1], comps) = 1) then
+        begin
+          x_left:= x_left + 1;
+        end else break
+      end;
+      if (x_left < x_right) then
+        for s2:= x_right downto x_left do
+        begin
+          if (compare(x[s2], x[s2 - 1], comps) = 1) then
+          begin
+            x_right:= x_right - 1;
+          end else break
+        end;
+    writeln(s1, ' ',y_left, 'to', x_left, ' ', s2, ' ', x_right, 'to', y_right);
+    (*collect values in Y ************************************************************
+     * y_left - left start for x; x_left - left end for x
+     * x_right - right start for x; y_right - right end for x
+     *)
+    s2:= x_right;
+    while ((y_left <= x_left) or (s2 <= y_right)) do
+    begin 
+      if (y_left > x_left) then begin
+        while (s2 <= y_right) do
+        begin
+          y[tmp_val]:= x[s2]; inc(tmp_val); inc(s2)
+        end; break
+        end;
+      if (s2 = y_right + 1) then begin
+        while (y_left <= x_left) do
+        begin
+          y[tmp_val]:= x[y_left]; inc(tmp_val); inc(y_left)
+        end; break
+        end;
+      if (x[y_left].heigth <= x[s2].heigth) then begin
+      y[tmp_val]:= x[y_left]; inc(tmp_val); inc(y_left) end
+      else begin
+      y[tmp_val]:= x[s2]; inc(tmp_val); inc(s2) end
+      
+    end;
+    x_left:= x_left + 1; x_right:= x_right - 1;
+    y_left:= x_left; y_right:= x_right;
+    //for s1:= 0 to max_n do x[s1]:= y[s1];
+    //x:= y;
+    //writeln('inc l&r ', x_left, ' ', x_right);
+    if (mode = 1) then print(x, max_n)
+
+  end;
+  writeln('second ', x_left, ' ', x_right, ' ', tmp_val);
+  x:=y;
+  print(y, max_n);
+  writeln;
+  //for s1:= 0 to max_n do write(y[s1].town);
+  print(x, max_n)
+
 end;
 
 end.
