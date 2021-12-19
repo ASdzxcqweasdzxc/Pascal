@@ -11,27 +11,18 @@ uses
   obj;
   
   procedure rFile(var arr: arrOfTowns; n: integer; fName: string);
-  procedure print(towns: arrOfTowns; n: integer);
 
 implementation
 procedure rFile(var arr: arrOfTowns; n: integer; fName: string);
 var
-  tf: text;
+  t_file: text;
   i: integer;
 begin
-  assign(tf, fName);
-  reset(tf);
-    for i:= 1 to n do
-      readln(tf, arr[i].town, arr[i].heigth, arr[i].measure);
-    close(tf);
+  assign(t_file, fName);
+  reset(t_file);
+    for i:= 0 to n do
+      readln(t_file, arr[i].town, arr[i].heigth, arr[i].c, arr[i].measure);
+    close(t_file);
 end;
-{*********************************************************************************************************}
-procedure print(towns: arrOfTowns; n: integer);
-var
-  i: integer;
-begin
-  for i:= 0 to n do
-    writeln(towns[i].town, towns[i].heigth, towns[i].measure)
-end;
-  
+
 end.
