@@ -14,7 +14,7 @@ type
   end;
 
   {sort for second element}
-procedure sortIf2(var list: pelement; item: pelement);
+procedure sortIf2(var list: pelement; var item: pelement);
 
 begin
   if (item^.ivalue < list^.ivalue) then
@@ -27,7 +27,7 @@ begin
 end;
 
   {main sort}
-procedure sort(var list: pelement; item: pelement);
+procedure sort(var list: pelement; var item: pelement);
   var
   pi: pelement;
 
@@ -68,13 +68,13 @@ procedure print(list: pelement);
     begin
       write(new_item^.ivalue, ' ');
       new_item:= new_item^.next
-    end;writeln
+    end; writeln(new_item^.ivalue)
   end;
 
 
 var
   L1, L2, new_item, x: pelement;
-  i, rnd: integer;
+  i, rnd, c: integer;
 
 begin
   Randomize();
@@ -82,28 +82,34 @@ begin
   rnd:= 11;
 
   {declaring L1}
-new(L1);
-  L1^.next:= nil;
-  L1^.ivalue:=0;
+//new(L1);
+  //L1^.next:= nil;
+  //L1^.ivalue:=0;
   for i:= 1 to i do begin
-    new(new_item);
+    new(new_item); inc(c);
     new_item^.next:= nil;
     new_item^.ivalue:= Random(rnd);
+    if (i = 1) then L1:= new_item else
+    begin
     sort(L1, new_item);
-    new_item:= nil; Dispose(new_item);
+    //new_item:= nil;
+    end
   end;
 
   {declaring L2}
-new(L2);
-  L2^.next:= nil;
-  L2^.ivalue:=0;
+//new(L2);
+  //L2^.next:= nil;
+  //L2^.ivalue:=0;
 
   for i:= 1 to i do begin
-    new(new_item);
+    new(new_item); inc(c);
     new_item^.next:= nil;
     new_item^.ivalue:= Random(rnd);
+    if (i = 1) then L2:= new_item else
+    begin
     sort(L2, new_item);
-    new_item:= nil; Dispose(new_item);
+    //new_item:= nil; Dispose(new_item)
+    end
   end;
 
   {print new lists}
@@ -117,16 +123,16 @@ new(L2);
   x:=L2;
   while (x^.next <> nil) do
   begin
-    new(new_item);
-    new_item^.next:= nil;
-    new_item^.ivalue:= x^.ivalue;
+    //new(new_item); inc(c);
+    //new_item^.next:= nil;
+    //new_item^.ivalue:= x^.ivalue;
     sort(L1, new_item);
-    new_item:= nil; Dispose(new_item);
+    //new_item:= nil; Dispose(new_item); dec(c)
     x:= x^.next;
     Dispose(L2); L2:= x
 
   end;
-  Dispose(x); x:= nil;
+  Dispose(x); x:= nil; dec(c);
 
   write('L1: ');
   print(L1);
