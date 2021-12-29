@@ -18,7 +18,7 @@ begin
    * writeln('Second sorting method: ', abs((711 + 212) mod 4) + 6); //= 9
    * writeln('Working data: ', abs((711 + 123) mod 11) + 1); //= 10
    *)
-  n:= 47 - 1;
+  n:= 5 - 1;
   seq:= 1;
   name:= '';
   demo:= 0;
@@ -47,8 +47,16 @@ begin
   writeln('Results for ', name, ': comparisons ',result[1].comps, ', changes ', result[1].changes, '. Total of ', result[1].comps + result[1].changes, ' iterations.');
   
   //Natural_Merging_Sort(var arr: arrOfTowns; var comps: integer; var changes: integer; max_n, mode: integer);
-  Natural_Merging_Sort(towns, comps, changes, n, demo);
+  //Natural_Merging_Sort(towns, comps, changes, n, demo);
+  N_Srt(towns, comps, changes, n, demo);
   //Nat_sort(towns, comps, changes, n, demo);
-  //print(towns, n); 
+  writeln;
+  print(towns, n);
+  N_Srt(towns, comps, changes, n, demo);
+  writeln;
+  print(towns, n);
+  N_Srt(towns, comps, changes, n, demo);
+  writeln;
+  print(towns, n); 
 ReadLn
 end.  
