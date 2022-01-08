@@ -10,7 +10,8 @@ type
   element = record
     town: string[15];
     heigth: integer;
-    measure: string[2];
+    c: char;
+    measure: string[1];
   end;
   arrOfTowns = array [0..99] of element;
     
